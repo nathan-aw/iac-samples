@@ -16,6 +16,9 @@ resource "aws_iam_role" "replication" {
   ]
 }
 POLICY
+  tags = {
+    env = "prod"
+  }
 }
 
 resource "aws_iam_policy" "replication" {
@@ -56,6 +59,9 @@ resource "aws_iam_policy" "replication" {
   ]
 }
 POLICY
+  tags = {
+    env = "prod"
+  }
 }
 
 resource "aws_iam_policy_attachment" "replication" {
