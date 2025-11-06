@@ -26,6 +26,9 @@ resource "aws_kms_key" "replica" {
 
   description             = "S3 bucket replication KMS key"
   deletion_window_in_days = 7
+  tags = {
+    env = "prod"
+  }
 }
 
 module "replica_bucket" {
